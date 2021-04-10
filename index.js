@@ -19,16 +19,18 @@ const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 let colorBlinking = null;
-const changeColor = refs.startBtn.addEventListener("click", () => {    
-    if (refs.isActive = true) {
+const changeColor = refs.startBtn.addEventListener("click", () => {
+    
+    if (refs.isActive === true) {
         return
     }
+    console.log('hello');
     colorBlinking = setInterval(() => {
         const randomIntegerFromInterval = (min, max) => {
             return Math.floor(Math.random() * (max - min + 1) + min);
-        }
-        refs.bodyPage.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length)];
-        console.log(colors[randomIntegerFromInterval(0, colors.length)])
+                 }
+            refs.bodyPage.style.backgroundColor = colors[randomIntegerFromInterval(0, (colors.length - 1))];
+        // console.log(colors[randomIntegerFromInterval(0, colors.length)])
         refs.isActive = true;
     }, 1000);    
     return
@@ -38,5 +40,3 @@ refs.stopBtn.addEventListener("click", () => {
     refs.isActive = false;
     clearInterval(colorBlinking);
     })
-    
-
