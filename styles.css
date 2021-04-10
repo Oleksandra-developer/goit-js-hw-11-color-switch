@@ -1,0 +1,15 @@
+body {
+  padding: 100px;
+}
+button {
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: medium;
+  width: 150px;
+  background-color: green;
+  border: 1px solid aliceblue;
+}
+button:hover {
+  color: black;
+  border: 1 px solid black;
+}
