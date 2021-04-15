@@ -24,14 +24,15 @@ const changeColor = refs.startBtn.addEventListener("click", () => {
     if (refs.isActive === true) {
         return
     }
-    console.log('hello');
+    
     colorBlinking = setInterval(() => {
         const randomIntegerFromInterval = (min, max) => {
             return Math.floor(Math.random() * (max - min + 1) + min);
                  }
             refs.bodyPage.style.backgroundColor = colors[randomIntegerFromInterval(0, (colors.length - 1))];
-        // console.log(colors[randomIntegerFromInterval(0, colors.length)])
+        console.log('hello,  ', colors[randomIntegerFromInterval(0, (colors.length - 1))])
         refs.isActive = true;
+        // console.log();
     }, 1000);    
     return
 })
